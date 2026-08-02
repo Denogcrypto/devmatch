@@ -22,12 +22,30 @@
             </nav>
             <div class="top-actions">
                 {% if current_user %}
-                <span class="topbar-username">{{ current_user }}</span>
-                <a href="/logout" class="button button-secondary">Logout</a>
+                <div class="user-menu" id="userMenu">
+                    <button class="user-avatar" id="userMenuBtn" onclick="toggleUserMenu()">
+                        {{ current_user[0] | upper }}
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="user-dropdown-name">{{ current_user }}</div>
+                        <a href="/profile" class="user-dropdown-item">Profile</a>
+                        <a href="/logout" class="user-dropdown-item user-dropdown-logout">Logout</a>
+                    </div>
+                </div>
                 {% else %}
                 <a href="/login" class="button button-secondary">Login</a>
                 {% endif %}
             </div>
+            <script>
+                function toggleUserMenu() {
+                    document.getElementById('userDropdown').classList.toggle('open');
+                }
+                document.addEventListener('click', function(e) {
+                    if (!document.getElementById('userMenu').contains(e.target)) {
+                        document.getElementById('userDropdown').classList.remove('open');
+                    }
+                });
+            </script>
         </header>
 
         <main class="page-content">
