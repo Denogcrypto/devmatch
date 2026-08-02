@@ -178,26 +178,36 @@ a {
 .hero-block {
   width: min(100%, 420px);
   aspect-ratio: 1 / 1;
-  background: radial-gradient(circle at center, rgba(78, 229, 255, 0.18), transparent 40%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
-  border: 1px solid rgba(92, 170, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px);
   border-radius: 2rem;
-  box-shadow: inset 0 0 80px rgba(5, 255, 255, 0.05);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.25);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+}
+
+.hero-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 2rem;
+  background: radial-gradient(circle at top right, rgba(74, 226, 255, 0.16), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(180, 108, 255, 0.1), transparent 32%);
+  pointer-events: none;
 }
 
 .hero-illustration {
-  width: 70%;
+  width: 75%;
   max-width: 260px;
-  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.35));
-  transition: transform 0.3s ease;
-}
-
-.hero-illustration:hover {
-  transform: scale(1.02);
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 24px 64px rgba(0, 0, 0, 0.24));
 }
 
 .auth-panel {
