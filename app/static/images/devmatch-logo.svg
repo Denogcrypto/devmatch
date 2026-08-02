@@ -1,24 +1,41 @@
-<svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="heartGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ff6b6b" />
-      <stop offset="100%" stop-color="#ff9e6b" />
+    <linearGradient id="hg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FF6B5B"/>
+      <stop offset="100%" stop-color="#FF9A5A"/>
     </linearGradient>
-    <linearGradient id="glowGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
-    </linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#fb7185" flood-opacity="0.18" />
-    </filter>
   </defs>
-  <rect x="10" y="10" width="240" height="240" rx="40" fill="#fafafa" fill-opacity="0.06" />
-  <path d="M130 210C117 210 108 201 98 190C84 176 54 147 54 110C54 72 84 48 122 48C132 48 142 52 150 59C158 52 168 48 178 48C216 48 246 72 246 110C246 147 216 176 202 190C192 201 183 210 170 210C160 210 150 204 150 204C150 204 140 210 130 210Z" fill="url(#heartGradient)" filter="url(#shadow)" />
-  <path d="M106 118L92 104L106 90" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M154 118L168 104L154 90" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M116 146H144" stroke="white" stroke-width="12" stroke-linecap="round" />
-  <circle cx="131" cy="122" r="14" fill="rgba(255,255,255,0.18)" />
-  <circle cx="131" cy="122" r="8" fill="white" />
-  <path d="M30 130C30 84 68 46 114 46" stroke="#ffffff" stroke-opacity="0.06" stroke-width="20" />
-  <path d="M230 130C230 176 192 214 146 214" stroke="#ffffff" stroke-opacity="0.06" stroke-width="20" />
+
+  <!-- Left card (tilted counter-clockwise) -->
+  <rect x="80" y="62" width="120" height="158" rx="18" fill="#D8D8D8"
+        transform="rotate(-12, 140, 141)"/>
+
+  <!-- Right card (tilted clockwise) -->
+  <rect x="80" y="62" width="120" height="158" rx="18" fill="#E4E4E4"
+        transform="rotate(12, 140, 141)"/>
+
+  <!-- Heart -->
+  <path d="M 140 230
+    C 117 210, 25 160, 25 117
+    C 25 80, 71 40, 111 40
+    C 129 40, 140 70, 140 90
+    C 140 70, 151 40, 169 40
+    C 209 40, 255 80, 255 117
+    C 255 160, 163 210, 140 230 Z"
+    fill="url(#hg)"/>
+
+  <!-- < bracket -->
+  <path d="M 108 122 L 88 140 L 108 158"
+        stroke="white" stroke-width="11"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- > bracket -->
+  <path d="M 172 122 L 192 140 L 172 158"
+        stroke="white" stroke-width="11"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- / slash -->
+  <path d="M 155 115 L 125 165"
+        stroke="white" stroke-width="11"
+        stroke-linecap="round" fill="none"/>
 </svg>
