@@ -49,9 +49,17 @@ a {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+}
+
+.brand-logo {
+  width: 2rem;
+  height: 2rem;
 }
 
 .main-nav {
