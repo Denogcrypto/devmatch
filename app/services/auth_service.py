@@ -7,7 +7,7 @@ from passlib.context import CryptContext
 from app.config import settings
 from app.schemas.token import TokenData
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto", bcrypt__rounds=12, bcrypt__truncate_error=False)
 
 class AuthService:
     @staticmethod
