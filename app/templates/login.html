@@ -12,7 +12,10 @@
         {% if registered %}
         <div class="auth-alert auth-alert-success">Account created successfully. Please log in.</div>
         {% endif %}
-        <form class="auth-form" method="post" action="/auth/login">
+        {% if error %}
+        <div class="auth-alert auth-alert-error">{{ error }}</div>
+        {% endif %}
+        <form class="auth-form" method="post" action="/login">
             <label>
                 <span>USERNAME/ROOT</span>
                 <input type="text" name="username" placeholder="user@devmatch_root" required />
