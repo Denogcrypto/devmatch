@@ -40,9 +40,13 @@ class UserService:
 
     @staticmethod
     async def authenticate_user(session: AsyncSession, username: str, password: str) -> User | None:
+        import logging
+        log = logging.getLogger(__name__)
         user = await UserService.get_user_by_username(session, username)
         if not user:
+            log.warning(f"LOGIN FAILED: user '{username}' not found in DB")
             return None
         if not AuthService.verify_password(password, user.hashed_password):
+            log.warning(f"LOGIN FAILED: wrong password for user '{username}'")
             return None
         return user
