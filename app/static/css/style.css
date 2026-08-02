@@ -200,41 +200,21 @@ a {
 
 .hero-logo-card {
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
+  aspect-ratio: 1 / 1;
   background: #ffffff;
-  border-radius: 2rem;
-  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.18);
-  padding: 2rem 2rem 1.8rem;
+  border-radius: 2.25rem;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.18);
+  padding: 2rem;
   display: grid;
   place-items: center;
-  gap: 1.4rem;
 }
 
 .hero-illustration {
-  width: 90%;
-  max-width: 280px;
+  width: 76%;
+  max-width: 240px;
   height: auto;
   display: block;
-}
-
-.hero-brand-copy {
-  display: grid;
-  place-items: center;
-  gap: 0.4rem;
-  text-align: center;
-}
-
-.hero-brand-copy strong {
-  font-size: 2.1rem;
-  letter-spacing: -0.04em;
-  color: #111827;
-}
-
-.hero-brand-copy span {
-  font-size: 0.95rem;
-  color: #6b7280;
-  letter-spacing: 0.14em;
-  text-transform: lowercase;
 }
 
 .auth-panel {
