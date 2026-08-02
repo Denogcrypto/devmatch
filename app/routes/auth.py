@@ -80,3 +80,9 @@ async def register_form_submit(
         )
 
     return RedirectResponse(url="/login?registered=1", status_code=status.HTTP_303_SEE_OTHER)
+
+@router.get("/logout")
+async def logout():
+    response = RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+    response.delete_cookie("access_token")
+    return response

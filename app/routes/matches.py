@@ -7,4 +7,4 @@ templates = Jinja2Templates(directory="app/templates")
 
 @router.get("/matches", response_class=HTMLResponse)
 async def matches(request: Request):
-    return templates.TemplateResponse("matches.html", {"request": request})
+    return templates.TemplateResponse("matches.html", {"request": request, "current_user": request.state.current_user})

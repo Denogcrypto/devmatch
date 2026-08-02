@@ -21,7 +21,12 @@
                 <a href="/profile">Profile</a>
             </nav>
             <div class="top-actions">
+                {% if current_user %}
+                <span class="topbar-username">{{ current_user }}</span>
+                <a href="/logout" class="button button-secondary">Logout</a>
+                {% else %}
                 <a href="/login" class="button button-secondary">Login</a>
+                {% endif %}
             </div>
         </header>
 
