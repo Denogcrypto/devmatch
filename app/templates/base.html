@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title if title else 'DevMatch' }}</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand">DevMatch</div>
+            <nav class="main-nav">
+                <a href="/dashboard">Dashboard</a>
+                <a href="/discover">Discover</a>
+                <a href="/matches">Matches</a>
+                <a href="/profile">Profile</a>
+            </nav>
+            <div class="top-actions">
+                <a href="/login" class="button button-secondary">Login</a>
+            </div>
+        </header>
+
+        <main class="page-content">
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="site-footer">
+            <div>© 2026 DevMatch. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="#">Algorithm</a>
+                <a href="#">API Docs</a>
+                <a href="#">Security</a>
+                <a href="#">GitHub</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="match-reveal">
+    <div class="match-head">
+        <h1>IT'S A MATCH!</h1>
+        <span>SYNCHRONIZATION SUCCESSFUL</span>
+    </div>
+    <div class="match-circle">TAP TO REVEAL IDENTITY</div>
+    <div class="match-info-grid">
+        <div class="info-card">
+            <span>CHALLENGE LEVEL</span>
+            <strong>Hard</strong>
+        </div>
+        <div class="info-card">
+            <span>RUNTIME MATCH</span>
+            <strong>98.4%</strong>
+            <small>O(log n) Efficiency</small>
+        </div>
+        <div class="info-card">
+            <span>SHARED STACK</span>
+            <strong>Rust<span>WASM</span></strong>
+        </div>
+    </div>
+    <div class="match-actions">
+        <button class="button button-primary">INITIATE CHAT</button>
+        <button class="button button-outline">VIEW SOLUTION</button>
+    </div>
+</section>
+{% endblock %}

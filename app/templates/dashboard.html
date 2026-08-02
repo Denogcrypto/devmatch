@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="dashboard-grid">
+    <aside class="sidebar-panel">
+        <div class="sidebar-brand">DevMatch</div>
+        <nav class="sidebar-nav">
+            <a href="/profile">Profile</a>
+            <a class="active" href="/discover">Discover</a>
+            <a href="/matches">Active Challenges</a>
+            <a href="#">Settings</a>
+        </nav>
+        <button class="button button-primary sidebar-action">+ New Match</button>
+    </aside>
+    <div class="content-panel">
+        <div class="card card-profile">
+            <div class="match-ribbon">AVAILABLE FOR HIRE</div>
+            <div class="profile-image"></div>
+            <h2>Alex Rivera, 26 <span>Senior Backend</span></h2>
+            <p>Obsessed with distributed systems and low-latency architectures. Building the future of real-time communication at scale.</p>
+            <div class="skill-tags">
+                <span>Rust</span>
+                <span>Kubernetes</span>
+                <span>GraphQL</span>
+                <span>+4 others</span>
+            </div>
+            <div class="profile-footer">EN, ES, DE · GMT-4</div>
+        </div>
+        <div class="action-panel">
+            <button class="button button-danger">✕</button>
+            <button class="button button-secondary">↑</button>
+            <button class="button button-outline">□</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

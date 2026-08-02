@@ -1,0 +1,10 @@
+from fastapi import APIRouter, Request
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
+
+router = APIRouter()
+templates = Jinja2Templates(directory="app/templates")
+
+@router.get("/matches", response_class=HTMLResponse)
+async def matches(request: Request):
+    return templates.TemplateResponse("matches.html", {"request": request})

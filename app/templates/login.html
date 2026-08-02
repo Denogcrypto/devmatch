@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-panel">
+    <div class="auth-box">
+        <div class="auth-header">
+            <span class="auth-logo">DevMatch</span>
+            <div class="auth-protocol">PROTOCOL: AUTH_V2.0.42</div>
+        </div>
+        <form class="auth-form" method="post" action="/auth/login">
+            <label>
+                <span>USERNAME/ROOT</span>
+                <input type="text" name="username" placeholder="user@devmatch_root" required />
+            </label>
+            <label>
+                <span>ACCESS_KEY</span>
+                <input type="password" name="password" placeholder="••••••••••" required />
+            </label>
+            <button type="submit" class="button button-primary">AUTHENTICATE_SESSION</button>
+        </form>
+        <div class="auth-meta">
+            <span>Recover Hash</span>
+            <span class="status-dot">NODE_STABLE</span>
+        </div>
+    </div>
+</section>
+{% endblock %}
