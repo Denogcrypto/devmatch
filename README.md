@@ -51,13 +51,42 @@ SECRET_KEY=<una-clave-fuerte>
 
 ## Ejecución
 
-Inicia la app con Uvicorn:
+1. Activa el entorno virtual:
+
+```bash
+cd /home/ec2-user/workshop
+source .venv/bin/activate
+```
+
+2. Asegúrate de que el archivo `.env` exista con estas variables:
+
+```env
+DATABASE_URL=postgresql+asyncpg://postgres:O0FT28nup16RvaUz@db.snardferfmneudmclypf.supabase.co:5432/postgres
+SECRET_KEY=devmatch_super_secret_key_2o9HjLqT1z6sF
+```
+
+- `DATABASE_URL`: URL de conexión a tu base de datos Supabase.
+- `SECRET_KEY`: clave secreta usada por la aplicación para firmar JWT internos.
+
+3. Inicia la app con Uvicorn:
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
 La aplicación estará disponible en `http://127.0.0.1:8000`.
+
+4. Verifica la conexión:
+
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+Debes recibir:
+
+```json
+{"status":"ok"}
+```
 
 ## Rutas principales
 
