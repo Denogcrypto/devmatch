@@ -4,7 +4,12 @@ from app.config import settings
 
 Base = declarative_base()
 
-engine: AsyncEngine = create_async_engine(settings.DATABASE_URL, future=True, echo=False)
+engine: AsyncEngine = create_async_engine(
+    settings.DATABASE_URL,
+    future=True,
+    echo=False,
+    connect_args={"statement_cache_size": 0},
+)
 async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 async def get_session() -> AsyncSession:
