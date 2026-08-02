@@ -257,6 +257,45 @@ a {
   font-size: 0.95rem;
 }
 
+.auth-alert {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.auth-alert-error {
+  background: rgba(255, 92, 92, 0.12);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 92, 92, 0.18);
+}
+
+.auth-alert-success {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+}
+
+.auth-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  color: var(--muted);
+}
+
+.auth-link {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-meta {
+  justify-content: center;
+}
+
 .auth-form {
   display: grid;
   gap: 1.3rem;

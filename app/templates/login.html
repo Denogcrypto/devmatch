@@ -9,6 +9,9 @@
                 <div class="auth-protocol">PROTOCOL: AUTH_V2.0.42</div>
             </div>
         </div>
+        {% if registered %}
+        <div class="auth-alert auth-alert-success">Account created successfully. Please log in.</div>
+        {% endif %}
         <form class="auth-form" method="post" action="/auth/login">
             <label>
                 <span>USERNAME/ROOT</span>
@@ -21,7 +24,7 @@
             <button type="submit" class="button button-primary">AUTHENTICATE_SESSION</button>
         </form>
         <div class="auth-meta">
-            <span>Recover Hash</span>
+            <a href="/register" class="auth-link">Create account</a>
             <span class="status-dot">NODE_STABLE</span>
         </div>
     </div>

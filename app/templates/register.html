@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-panel">
+    <div class="auth-box">
+        <div class="auth-header">
+            <img src="/static/images/devmatch-logo.svg" alt="DevMatch logo" class="auth-logo-icon" />
+            <div>
+                <span class="auth-logo">DevMatch</span>
+                <div class="auth-protocol">PROTOCOL: REGISTER_V1.1</div>
+            </div>
+        </div>
+        {% if error %}
+        <div class="auth-alert auth-alert-error">{{ error }}</div>
+        {% endif %}
+        <form class="auth-form" method="post" action="/register">
+            <label>
+                <span>USERNAME</span>
+                <input type="text" name="username" placeholder="user@devmatch_root" required value="{{ username or '' }}" />
+            </label>
+            <label>
+                <span>EMAIL</span>
+                <input type="email" name="email" placeholder="you@domain.com" required value="{{ email or '' }}" />
+            </label>
+            <label>
+                <span>PASSWORD</span>
+                <input type="password" name="password" placeholder="••••••••••" required />
+            </label>
+            <button type="submit" class="button button-primary">CREATE ACCOUNT</button>
+        </form>
+        <div class="auth-meta register-meta">
+            <span>Already have an account?</span>
+            <a href="/login">Sign in</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
